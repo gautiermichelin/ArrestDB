@@ -259,7 +259,9 @@ ArrestDB::Serve('POST', '/(#any)', function ($table)
 
 		else
 		{
+			$id = $result;
 			$result = ArrestDB::$HTTP[201];
+			$result['id'] = (int)$id;
 		}
 	}
 
